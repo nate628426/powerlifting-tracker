@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS348 Project 1 | Gym Availability</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <div class="header">
+        <h1>Gym Session Tracker</h1>
+        <h3>By: Nathan Lo | CS34800 Project 1 </h2>
+    </div>
+    <div class = "spacer"></div>
+    <div class="input-container">
+        <h2> Adding <i>or</i> Editing Data Entry </h2>
+        <h4> To add an entry, include data for machine, exercise, sets, duration and comments.</h4>
+        <h4> To edit an entry, include the ID alongside the above.</h4>
+        <form>
+            <input type="text" placeholder="Insert Machine Used..." name="machine" id ="machine1">
+            <input type="text" placeholder="Insert Exercise..." name="exercise" id = "exercise1">
+            <input type="text" placeholder="Input # of Sets" name="sets_performed" id = "sets1">
+            <input type="text" placeholder="Input Duration" name="duration" id = "duration1">
+            <input type="text" placeholder="(Additional Comments)" name="add_comments" id = "comments1">
+            <button type="submit" id = "add-button">Submit Addition</button>
+            <button type="submit" id = "edit-button">Submit Edits</button>
+        </form>
+    </div>
+    <div class ="script_result" id="message1"> </div>
+    
+    <div class = "spacer" ></div>
+
+    <div class = "input-container">
+        <h2> Search Data </h2>
+        <h3> Search by ID </h3>
+        <form>
+            <input type="text" placeholder="Insert ID given" name="provided_id">
+        </form>
+        <h3> Or search by parameters</h3>
+        <form>
+            <input type="text" placeholder="Insert Machine Used..." name="machine">
+            <input type="text" placeholder="Insert Exercise..." name="exercise">
+            <input type="text" placeholder="Input # of Sets" name="sets_performed">
+            <input type="text" placeholder="Input Duration" name="duration">
+
+            <button type="submit" id = "search-button">Submit</button>
+        </form>
+    </div>
+    <div class = "spacer"></div> 
+    <div class = "input-container">
+        <h2> Delete Data </h2>
+        <form>
+            <input type="text" placeholder="Insert ID provided..." name="provided_id">
+        </form>
+        <h4><i>are you sure?</i></h4>
+        <button type="red-submit" id = "delete-button"> Submit</button>
+    </div>
+
+    <script src="./script.js"></script>
+
+    
+</body>
+</html>

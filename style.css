@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #EADDCA;
+}
+
+.header {
+    background-color: #DAA06D;
+    color: white;
+}
+.spacer {
+    height: 100px;
+}
+.input-container {
+    border-radius: 20px; 
+    border: 2px solid #DAA06D; 
+} 
+
+.input-container input[type="text"]:focus {
+    border-color: #DAA06D;
+}
+.input-container button[type="red-submit"] {
+    background-color: red;
+    border-radius: 20px;
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    margin-left: 10px; 
+    transition: transform 0.5s ease-in-out; 
+    cursor: pointer;
+}
+
+.input-container button[type="submit"] {
+    background-color: #DAA06D;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; 
+    margin-left: 10px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.input-container button[type="submit"]:active {
+    transform: scale(0.95); 
+}
+
+.input-container input[type="text"] {
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    background-color: #EADDCA;
+}
+.script_result {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
