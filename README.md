@@ -1,2 +1,2 @@
-# powerlifting-tracker
+# Powerlifting-Tracker
 CS348 Project 
