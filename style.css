@@ -16,12 +16,12 @@ body {
     color: white;
 }
 .spacer {
-    height: 100px;
+    height: 5px;
 }
 .input-container {
     border-radius: 20px; 
     border: 2px solid #DAA06D; 
-} 
+} */
 
 .input-container input[type="text"]:focus {
     border-color: #DAA06D;
@@ -33,7 +33,7 @@ body {
     border: none; 
     padding: 10px 20px; 
     margin-left: 10px; 
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.3s ease-in-out; 
     cursor: pointer;
 }
 
@@ -44,7 +44,7 @@ body {
     border: none;
     padding: 10px 20px; 
     margin-left: 10px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -54,6 +54,8 @@ body {
 
 .input-container input[type="text"] {
     align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 10px;
     border-radius: 20px;
     border: none;
@@ -63,5 +65,10 @@ body {
 .script_result {
     overflow-y: auto;
     max-height: 200px;
+}
+.result {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 

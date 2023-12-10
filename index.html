@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS348 Project 1 | Gym Availability</title>
+    <title>CS348 Project 1 | Gym Progress Tracker!</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -11,14 +11,17 @@
 <body>
     <div class="header">
         <h1>Gym Session Tracker</h1>
-        <h3>By: Nathan Lo | CS34800 Project 1 </h2>
+        <h3>By: Nathan Lo | CS34800 Database Project </h2>
     </div>
     <div class = "spacer"></div>
     <div class="input-container">
-        <h2> Adding <i>or</i> Editing Data Entry </h2>
+        <h2> Adding, Editing, <i>or</i> Searching Data Entries </h2>
+        <h5> note: everything is case-sensitive.</h5>
         <h4> To add an entry, include data for machine, exercise, sets, duration and comments.</h4>
         <h4> To edit an entry, include the ID alongside the above.</h4>
+        <h4> To search for entries, include the unique ID <i>OR</i> input desired attributes. Avoid attempting to utilizing the additional comments to search for values.</h5>
         <form>
+            <input type="text" placeholder="Insert desired unique ID to identify this workout" name="provided_id" id="_id">
             <input type="text" placeholder="Insert Machine Used..." name="machine" id ="machine1">
             <input type="text" placeholder="Insert Exercise..." name="exercise" id = "exercise1">
             <input type="text" placeholder="Input # of Sets" name="sets_performed" id = "sets1">
@@ -26,37 +29,37 @@
             <input type="text" placeholder="(Additional Comments)" name="add_comments" id = "comments1">
             <button type="submit" id = "add-button">Submit Addition</button>
             <button type="submit" id = "edit-button">Submit Edits</button>
+            <button type="submit" id = "search-button">Submit Search Request</button>
         </form>
     </div>
-    <div class ="script_result" id="message1"> </div>
-    
-    <div class = "spacer" ></div>
 
-    <div class = "input-container">
-        <h2> Search Data </h2>
-        <h3> Search by ID </h3>
-        <form>
-            <input type="text" placeholder="Insert ID given" name="provided_id">
-        </form>
-        <h3> Or search by parameters</h3>
-        <form>
-            <input type="text" placeholder="Insert Machine Used..." name="machine">
-            <input type="text" placeholder="Insert Exercise..." name="exercise">
-            <input type="text" placeholder="Input # of Sets" name="sets_performed">
-            <input type="text" placeholder="Input Duration" name="duration">
-
-            <button type="submit" id = "search-button">Submit</button>
-        </form>
-    </div>
     <div class = "spacer"></div> 
+
     <div class = "input-container">
         <h2> Delete Data </h2>
         <form>
-            <input type="text" placeholder="Insert ID provided..." name="provided_id">
+            <input type="text" placeholder="Insert ID given" name="provided_id" id="delete_id">
         </form>
         <h4><i>are you sure?</i></h4>
         <button type="red-submit" id = "delete-button"> Submit</button>
     </div>
+    <div class = "spacer"></div> 
+    <div class = "input-container">
+        <h2>Coach's Exercises</h2>
+        <h3>Use these fields to enter exercises from your coach (enforces specific input type for all fields).</h3>
+        <form id="strict-add-form">
+            <input type="text" placeholder="Unique Identification" name="provided_id" id="coach_id">
+            <input type="text" id="strict_machine" placeholder="Machine" required>
+            <input type="text" id="strict_exercise" placeholder="Exercise" required>
+            <input type="number" id="strict_sets" placeholder="Sets" required>
+            <input type="number" id="strict_duration" placeholder="Duration" required>
+            <input type="text" id="strict_comments" placeholder="Comments" required>
+            <button type="submit" onclick="handleStrictAddButton(event)">Strict Add</button>
+        </form>
+    </div>
+    <div class ="script_result" id="message1"> </div>
+
+    <div id="search-results"></div>
 
     <script src="./script.js"></script>
 
