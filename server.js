@@ -10,6 +10,7 @@ app.use(cors());
 //Mongoose schema for adding data, ODM technology.
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }); 
 
+
 const strictExerciseSchema = new mongoose.Schema({
     _id: { type: String, required: true },
     machine: { type: String, required: true },
