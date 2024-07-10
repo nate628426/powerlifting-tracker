@@ -3,6 +3,7 @@ document.getElementById('edit-button').addEventListener('click', handleEditButto
 document.getElementById('search-button').addEventListener('click', handleSearchButton);
 document.getElementById('delete-button').addEventListener('click', handleDeleteButton);
 
+
 const script_result = document.getElementById('message1');
 //For Adding information to MongoDB Database
 async function handleAddButton() {
